@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form</title>
+
+    <style>
+        .radio, .checkbox, .select {
+            -moz-user-select: -moz-none;
+            -khtml-user-select: none;
+            -webkit-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+        }
+
+        .radio, .checkbox {
+            width: 1em;
+            height: 1em;
+
+            border: 1px solid black;
+
+            display: inline-block;
+        }
+
+        .radio.focus, .checkbox.focus {
+            outline: 1px solid cyan;
+        }
+
+        .radio.active, .checkbox.active {
+            background-color: red;
+        }
+
+        .radio.active2, .checkbox.active2 {
+            background-color: blue;
+        }
+
+        .select {
+            width: 250px;
+            height: 1em;
+
+            display: inline-block;
+
+            position: relative;
+        }
+
+        .select-selected, .select-dropdown {
+            width: 100%;
+
+            border: 1px solid black;
+
+            display: block;
+        }
+
+        .select-selected {
+            height: 100%;
+        }
+
+        .select-dropdown {
+            top: 1em;
+            left: 0;
+
+            display: block;
+            position: absolute;
+        }
+
+        .select-dropdown.hide {
+            display: none;
+        }
+
+
+        .select-dropdown li:hover, .select-dropdown li.active {
+            background-color: yellow;
+
+            cursor: default;
+        }
+
+        .select.focus .select-selected {
+            outline: 1px solid cyan;
+        }
+
+        .error {
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+<body>
+    <form action="">
+
+        <fieldset>
+            <legend>Validation</legend>
+            <label for="required">Required</label>
+            <input name="required" id="required" type="text" value="" data-validation="required"/>
+            <br/>
+            <label for="email">E-mail</label>
+            <input name="email" id="email" type="email" value="" data-validation="email"/>
+            <br/>
+            <label for="number">Number</label>
+            <input name="number" id="number" type="number" value="" data-validation="numeral"/>
+            <br/>
+            <label for="custom">Custom ([a-z]+)</label>
+            <input name="custom" id="custom" type="text" value="" data-validation="[a-z]+"/>
+            <br/>
+            <label for="multiple">Multiple (required, [a-z]{1}[0-9}{4})</label>
+            <input name="multiple" id="multiple" type="text" value="" data-validation="required [a-z]{1}[0-9]{4}"/>
+        </fieldset>
+
+        <input name="submit" id="submit" type="submit" value="Submit"/>
+    </form>
+
+    <script src="../libraries/mustache.js"></script>
+
+    <script src="../libraries/jquery.js"></script>
+
+    <script src="../validate.idex.js"></script>
+    <script src="app.idex.js"></script>
+</body>
+</html>

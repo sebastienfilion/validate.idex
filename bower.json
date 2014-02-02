@@ -1,0 +1,10 @@
+{
+    "name": "idex-validate",
+    "version": "0.1.0",
+    "main": "/",
+    "ignore": [
+        ".git",
+        ".gitignore",
+        ".DS_Store"
+    ]
+}
