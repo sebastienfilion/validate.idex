@@ -31,7 +31,7 @@ The ```idex.validate``` function takes two arguments an ```elemen [DOM element o
 Validate.IDeX will validate the content of all inputs selected that have the special ```data-validation```. The attribute takes two different kind of content. A validation type, built-in, (```required```, ```alpha```, ```numeral```, ```alphanumeral``` and ```email```) or a valid Regular Expression (```/[a-z]{1}[0-9]{4}/```). Instruction can be combined, separated by a space, to create a more rigid validation.
 
 ```html
-<input type="text" name="test" data-validation="required alpha \{1,4}" />
+<input type="text" name="test" data-validation="required alpha \{1,4}\" />
 ```
 
 #### Callbacks ```[object function]```
